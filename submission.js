@@ -49,7 +49,7 @@ const findFrequency = function(array) {
   return (`{most: '${maxItem}', least: '${leastItem}'}`);
   
 };
-};
+
 
 const isPalindrome = function(str) {
   // your code here - don't forget to return a boolean!
