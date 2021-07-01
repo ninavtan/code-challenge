@@ -9,7 +9,6 @@ const findSum = function(array) {
 
 const findFrequency = function(array) {
   // your code here - don't forget to return an object!
-  const findFrequency = (array) => {
   let maxCounter = 0;
   let maxFrequency = 1;
   let maxItem;
