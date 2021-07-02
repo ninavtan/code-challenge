@@ -46,17 +46,21 @@ const findFrequency = function(array) {
     } 
       leastCounter = 0;
   }
-  return (`{most: '${maxItem}', least: '${leastItem}'}`);
-  
+  let finalItems = {
+    'most': maxItem,
+    'least': leastItem,
+  }
+  return finalItems;
 };
+  
 
 
 const isPalindrome = function(str) {
   // your code here - don't forget to return a boolean!
-  const splitString = string.split("");
+  const splitString = str.split("");
   const reverse = splitString.reverse().join("");
   
-  if (reverse === string) {
+  if (reverse === str) {
     return true;
   } else {
     return false;
@@ -84,14 +88,14 @@ const removeParenth = function(str) {
   const openParentheses = '(';
   const closeParentheses = ')';
 
-  const indexOfFirst = string.indexOf(openParentheses);
+  const indexOfFirst = str.indexOf(openParentheses);
   console.log(indexOfFirst);
 
-  const indexOfLast = string.indexOf(closeParentheses);
+  const indexOfLast = str.indexOf(closeParentheses);
   console.log(indexOfLast);
 
-  const beginning = string.slice(0, indexOfFirst);
-  const end = string.slice(indexOfLast + 1, string.length);
+  const beginning = str.slice(0, indexOfFirst);
+  const end = str.slice(indexOfLast + 1, string.length);
  
   return (beginning + end);
   
@@ -104,8 +108,8 @@ const scoreScrabble = function(str) {
   };
   let sum = 0;
 
-  for (i = 0; i < word.length; i++) {
-    sum += alphabetPoints[word[i]] || 0;
+  for (i = 0; i < str.length; i++) {
+    sum += alphabetPoints[str[i]] || 0;
   }
   return sum;
 };
